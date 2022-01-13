@@ -1,4 +1,4 @@
-package com.example.modid.mixin;
+package com.sweepyspud.shield_thorns.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.client.gui.screen.TitleScreen;
 
-import static com.example.modid.Example.LOGGER;
+import static com.sweepyspud.shield_thorns.ShieldThornsInitializer.LOGGER;
 
 @Mixin(TitleScreen.class)
 public class TitleScreenMixin

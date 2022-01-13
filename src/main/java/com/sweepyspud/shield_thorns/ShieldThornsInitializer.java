@@ -1,11 +1,11 @@
-package com.example.modid;
+package com.sweepyspud.shield_thorns;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import net.fabricmc.api.ModInitializer;
 
-public class Example implements ModInitializer
+public class ShieldThornsInitializer implements ModInitializer
 {
     public static final Logger LOGGER = LogManager.getLogger("modid");
 

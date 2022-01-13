@@ -5,32 +5,29 @@
   "name": "${name}",
   "description": "Lorem ipsum dolor sit amet",
   "authors": [
-    "[fullname]"
+    "SweepySpud"
   ],
   "contact": {
-    "homepage": "https://github.com/axieum/fabric-example-mod",
-    "sources": "https://github.com/axieum/fabric-example-mod",
-    "issues": "https://github.com/axieum/fabric-example-mod/issues"
+    "homepage": "https://github.com/SweepySpud/shield-thorns",
+    "sources": "https://github.com/SweepySpud/shield-thorns",
+    "issues": "https://github.com/SweepySpud/shield-thorns/issues"
   },
-  "license": "CC0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/shield_thorns/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.modid.Example"
+      "com.sweepyspud.shield_thorns.ShieldThornsInitializer"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "shield_thorns.mixins.json"
   ],
   "depends": {
     "java": ">=17",
     "minecraft": "1.18.x",
     "fabricloader": ">=0.11.3",
     "fabric": "*"
-  },
-  "recommends": {
-    "modid-sub": "*"
   },
   "suggests": {
     "modmenu": "*"
