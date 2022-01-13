@@ -5,13 +5,13 @@ import org.apache.logging.log4j.Logger;
 
 import net.fabricmc.api.ModInitializer;
 
-public class AnotherExample implements ModInitializer
+public class AnotherExample
 {
-    public static final Logger LOGGER = LogManager.getLogger("modid-sub");
+    //public static final Logger LOGGER = LogManager.getLogger("modid-sub");
 
-    @Override
-    public void onInitialize()
-    {
-        LOGGER.info("Another Example is getting ready...");
-    }
+    //@Override
+    //public void onInitialize()
+    //{
+      //  LOGGER.info("Another Example is getting ready...");
+    //}
 }

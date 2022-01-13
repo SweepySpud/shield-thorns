@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.client.gui.screen.TitleScreen;
 
-import static com.example.modid.submod.AnotherExample.LOGGER;
+//import static com.example.modid.submod.AnotherExample.LOGGER;
 
 @Mixin(TitleScreen.class)
 public class TitleScreenMixin
@@ -20,6 +20,6 @@ public class TitleScreenMixin
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info)
     {
-        LOGGER.info("This is another example mixin - and you've reached the title screen too!");
+        //LOGGER.info("This is another example mixin - and you've reached the title screen too!");
     }
 }
