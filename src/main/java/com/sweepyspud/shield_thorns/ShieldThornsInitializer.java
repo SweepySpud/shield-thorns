@@ -7,11 +7,11 @@ import net.fabricmc.api.ModInitializer;
 
 public class ShieldThornsInitializer implements ModInitializer
 {
-    public static final Logger LOGGER = LogManager.getLogger("modid");
+    public static final Logger LOGGER = LogManager.getLogger("Shield Thorns");
 
     @Override
     public void onInitialize()
     {
-        LOGGER.info("Example is getting ready...");
+        LOGGER.info("Shield Thorns are getting ready...");
     }
 }

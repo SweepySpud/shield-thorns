@@ -3,10 +3,12 @@
   "minVersion": "0.8",
   "package": "com.sweepyspud.shield_thorns.mixin",
   "compatibilityLevel": "JAVA_16",
-  "mixins": [],
+  "mixins": [
+    "PlayerEntityMixin",
+    "ThornsEnchantmentMixin"
+  ],
   "server": [],
   "client": [
-    "TitleScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
