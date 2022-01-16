@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
   "id": "${id}",
+  "schemaVersion": 1,
   "version": "${version}",
   "name": "${name}",
   "description": "Simply makes the thorns enchantment apply on shields!",
@@ -18,7 +18,8 @@
   "entrypoints": {
     "main": [
       "com.sweepyspud.shield_thorns.ShieldThornsInitializer"
-    ]
+    ],
+    "modmenu": ["com.sweepyspud.shield_thorns.config.ModMenuIntegration"]
   },
   "mixins": [
     "shield_thorns.mixins.json"
