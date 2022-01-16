@@ -188,4 +188,4 @@ publishing {
     }
 }
 
-publish.finalizedBy tasks.curseforge, tasks.modrinth
+publish.finalizedBy tasks.curseforge//, tasks.modrinth
