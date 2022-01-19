@@ -42,6 +42,8 @@ allprojects {
         }
     }
 
+    minecraft { runs { client { property "mixin.debug.export", "true"} } }
+
     // Perform tests using the JUnit test suite
     test {
         useJUnitPlatform()
