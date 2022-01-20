@@ -11,19 +11,10 @@ import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 @Mixin(Enchantments.class)
 public class EnchantmentsMixin {
 
-    //Make thorns compatible with shield
-    /*@Inject(at = @At("HEAD"), method = "isAcceptableItem", cancellable = true)
-    private void isAcceptableItem(ItemStack stack, CallbackInfoReturnable<Boolean> returnValue){
-        if (stack.getItem() instanceof ShieldItem) {
-            returnValue.setReturnValue(true);
-        }
-    }
-    }*/
-
+    //Modifies the arguments where a ThornsEnchantment instance is defined in the Enchantments
     @ModifyArgs(method = "<clinit>", at = @At(value = "INVOKE", target = "Lnet/minecraft/enchantment/ThornsEnchantment;<init>(Lnet/minecraft/enchantment/Enchantment$Rarity;[Lnet/minecraft/entity/EquipmentSlot;)V"))
     private static void setThornsEquipmentSlots(Args args) {
-        System.out.println("mixin works");
-        //args.set(0, Enchantment.Rarity.VERY_RARE);
+        //.values of an enum returns all values in enum, in EquipmentSlot it includes all armor slots + mainhand/offhand instead of the default behavior of only all armor slots
         args.set(1, EquipmentSlot.values());
 
     }
