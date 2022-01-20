@@ -30,7 +30,7 @@ public abstract class PlayerEntityMixin extends LivingEntity{
         super(entityType, world);
     }
 
-    //Inject into the sdamage detection method of players
+    //Inject into the damage detection method of players
     @Inject(at = @At(value = "HEAD"), method = "damage")
     private void damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir){
         LivingEntity attacker = (LivingEntity) source.getAttacker();
