@@ -1,0 +1,5 @@
+{"text.autoconfig.shield_thorns.title":"Shield Thorns Config",
+  "text.autoconfig.shield_thorns.option.enableShieldBlockDamage":"Shield blocking applies thorns damage",
+  "text.autoconfig.shield_thorns.option.disableVanillaBehavior":"Stop default thorns behavior on shields"
+
+}

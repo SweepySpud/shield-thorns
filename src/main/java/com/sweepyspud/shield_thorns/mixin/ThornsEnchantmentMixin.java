@@ -1,5 +1,8 @@
 package com.sweepyspud.shield_thorns.mixin;
 
+import com.sweepyspud.shield_thorns.ShieldThornsInitializer;
+import com.sweepyspud.shield_thorns.config.ShieldThornsConfig;
+import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.enchantment.ThornsEnchantment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -20,12 +23,15 @@ import java.util.Random;
 @Mixin(ThornsEnchantment.class)
 public class ThornsEnchantmentMixin {
 
+
+
     //Inject when the function damaging attacker is invoked, capture map entry that contains the current item with thorns as local variable
     //Cancel vanilla behavior of damaging attacker for default, use our own implementation instead unless otherwise specified in config
     @Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;damage(Lnet/minecraft/entity/damage/DamageSource;F)Z"), method = "onUserDamaged", locals = LocalCapture.CAPTURE_FAILSOFT, cancellable = true)
     private void onUserDamaged(LivingEntity user, Entity attacker, int level, CallbackInfo ci, Random random, Map.Entry<EquipmentSlot, ItemStack> entry) {
-        if (entry != null) {
-            if (entry.getValue().getItem() instanceof ShieldItem) {
+        if (entry != null && ShieldThornsInitializer.isInitialized) {
+            ShieldThornsConfig config = AutoConfig.getConfigHolder(ShieldThornsConfig.class).getConfig();
+            if (entry.getValue().getItem() instanceof ShieldItem && config.enableShieldBlockDamage) {
                 ci.cancel();
             }
         }
